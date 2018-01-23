@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <meta http-equiv="X-UA-Compatible" content="ie=edge">
+          <link rel="stylesheet" href="css/style.css">
+		  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+          <title>Neighbourhood Map Project</title>
+		  
+    </head>
+	
+    <body>
+	
+	<header>
+	<i id="nav-button"  class=" nav-button fa fa-bars" style="color:white;margin: 5px;padding: 10px;" aria-hidden="true" data-bind="click: navClick, css: {'down': isNavClosed}"></i> Grocery Stores in Mountain View</h1>
+	<h1></h1>
+	</header>
+	
+	<div class = "container">
+	
+    <div id="menu" class = "menu speed" data-bind="css: {'moveUp': isNavClosed}">
+	
+      <div id = "floating-panel" class="floating-panel">
+      </div>
+	  
+      <div class = "list-container">
+	  
+        <div class = "filter">
+		
+          <div>Filter results:
+            <form id = "filter-form" class = "filter-form">
+              <input type = "text" data-bind = 'value:searchOption,valueUpdate: "afterkeydown"' placeholder="Search" >
+              <button type = "submit">Clear</button>
+            </form>
+          </div>
+		  
+        </div>
+		
+        <div class = "list">
+          <h2>Stores</h2>
+		  
+          <ul data-bind = "foreach: filteredList, visible: filteredList().length > 0" class = "list-spaces" > 
+            <li data-bind = "click: $parent.onClick,text: title"></li>
+          </ul>
+        </div>
+		
+      </div>
+    </div>
+	
+	 <div id="map" class="map"></div>
+	 </div>
+	
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
+              <script src="js/app.js"></script>
+              <script src="js/model.js"></script>
+              <script async defer onerror="errorOnLoad()" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY=3&callback=initMap">
+              </script>
+    </body>
+</html>
