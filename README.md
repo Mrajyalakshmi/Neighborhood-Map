@@ -14,16 +14,16 @@ This single page application shows a map of grocery stores in Mountain View,CA.
 
 ## Code
 
-#### CSS 
+##### CSS 
 
 style.css ( custom styling of app)
 
-#### JS  
+##### JS  
 app.js (application file with view model)
 
 model.js (data to populate the map)
 
-####HTML
+###### HTML
 
 Index.html (renders the binded data in the web browser)
 
