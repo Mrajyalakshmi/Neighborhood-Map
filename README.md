@@ -23,7 +23,7 @@ app.js (application file with view model)
 
 model.js (data to populate the map)
 
-###### HTML
+##### HTML
 
 Index.html (renders the binded data in the web browser)
 
